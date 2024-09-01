@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Code Colab: Real-Time Collaborative Coding Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+Code Colab is a powerful, real-time collaborative coding platform designed to streamline team coding efforts, whether you're working on a small project or managing a large-scale development task. With a clean, user-friendly interface, Code Colab provides a seamless experience for developers to write, share, and edit code together in real-time. It’s the perfect tool for coding interviews, pair programming, and collaborative development.
 
-## Available Scripts
+
+## Features
+1. Real-Time Collaboration: Work together with your team in real-time, watching code changes appear instantly across all connected devices.
+2. Multiple Language Support: Choose from a variety of programming languages to suit your project needs.
+3. Intuitive Interface: A clean and simple UI that focuses on the essentials, making it easy to dive into coding.
+4. Live Preview: See the results of your code as you type, with live preview capabilities.
+## Installation
+
+1. Clone frontend and backend repositories
+2. Setup backend ```CodeColabBackend```
+3. Setup frontend ```codecolab-platform-frontend```
+
+## How to run frontend
 
 In the project directory, you can run:
-
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-### `npm test`
+### Starting a New Session
+1. Visit the homepage and create a new session.
+2. Share the session URL with your collaborators.
+3. Choose your preferred programming language and start coding together!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Joining an Existing Session
+1. Open the session URL shared by your team.
+2. Start collaborating in real-time!
 
-### `npm run build`
+```
+/backend
+    /src
+        /main
+            /java
+                /com/example/codecolab
+                    Application.java
+                    /controller
+                    /service
+                    /model
+            /resources
+                application.properties
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+/frontend
+    /public
+    /src
+        App.js
+        index.js
+        /components
+        /styles
+    package.json
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
+We welcome contributions! If you have an idea for a feature or find a bug, please open an issue or submit a pull request. Follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Fork the repository
+* Create a new branch (git checkout -b feature/YourFeature)
+* Commit your changes (git commit -m 'Add YourFeature')
+* Push to the branch (git push origin feature/YourFeature)
+* Open a Pull Request
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+Chandrashekar

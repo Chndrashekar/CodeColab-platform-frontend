@@ -121,6 +121,7 @@ textarea {
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    height: 500px;
     resize: vertical; /* Allows vertical resizing of the textarea */
     box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
     margin-bottom: 0; /* Ensure no extra margin at the bottom of the textarea */
