@@ -34,14 +34,6 @@
     border-radius: 4px;
 }
 
-.info-panel {
-    flex: 1;
-    padding: 20px;
-    background-color: #ffffff;
-    border-left: 1px solid #ccc;
-    overflow-y: auto;
-}
-
 .info-panel h2, .info-panel h3 {
     margin-top: 0;
     color: #333;
@@ -51,4 +43,22 @@
     font-size: 14px;
     color: #666;
     line-height: 1.6;
+}
+
+.info-panel {
+    width: 400px; /* Set the width to a fixed value */
+    padding: 40px;
+    background-color: #ffffff;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    height: 100%; /* Ensures the panel takes up the full height of its container */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical; /* Allows vertical resizing of the textarea */
 }

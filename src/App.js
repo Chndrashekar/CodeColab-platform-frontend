@@ -22,12 +22,7 @@ const Home = () => {
         window.location.href = `/${sessionId}`;
     };
 
-    return (
-        <div>
-            <h1>Welcome to Collaborative Editor</h1>
-            <button onClick={createSession}>Create New Session</button>
-        </div>
-    );
+    createSession();
 };
 
 export default App;

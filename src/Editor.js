@@ -16,6 +16,7 @@ const Editor = () => {
     const [content, setContent] = useState('');  // State to hold the content of the editor
     const [language, setLanguage] = useState('javascript');  // State to hold the selected language
     const [fontSize, setFontSize] = useState(16);  // State to hold the font size of the editor
+    const [description, setDescription] = useState('');  // Start with an empty string
 
     useEffect(() => {
         // Connect to the WebSocket server and handle incoming messages
@@ -23,6 +24,14 @@ const Editor = () => {
             if (message.content !== undefined) {
                 console.log('Received content:', message.content);
                 setContent(message.content);  // Update the editor content with the received message
+            }
+            if (message.language !== undefined) {
+                console.log('Received language:', message.language);
+                setLanguage(message.language);  // Set the editor language
+            }
+            if (message.description !== undefined) {
+                console.log('Received description:', message.description);
+                setDescription(message.description);  // Set the editor description
             }
         });
 
@@ -40,7 +49,19 @@ const Editor = () => {
     };
 
     const handleLanguageChange = (event) => {
-        setLanguage(event.target.value);  // Update the selected language
+        const newLanguage = event.target.value;
+        setLanguage(newLanguage);  // Update the selected language
+    
+        // Send the new language to the server
+        WebSocketClient.sendLanguageMessage(newLanguage);
+    };
+
+    const handleDescriptionChange = (e) => {
+        const newDescription = e.target.value;
+        setDescription(newDescription);
+
+        // Send the new description to the server
+        WebSocketClient.sendDescriptionMessage({description: newDescription});
     };
 
     const handleFontSizeChange = (event) => {
@@ -50,11 +71,14 @@ const Editor = () => {
     return (
         <div className="container">
             <div className="info-panel">
-                <h2>Real-Time    Collaboration Platform</h2>
-                <h3> To - Do </h3>
-                <p>To be updated to be able to write the problem description.</p>
-                <h3>Output</h3>
-                <p>Output of the code will shown here</p>
+                <h2>Problem Statement</h2>
+                <textarea
+                    value={description}
+                    onChange={handleDescriptionChange}
+                    rows="5"
+                    placeholder="Start writing your problem statement here..."
+                    style={{ width: '100%', marginBottom: '10px' }}
+                />
             </div>
             <div className="editor-container">
                 <div className="editor-header">
