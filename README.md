@@ -3,6 +3,12 @@
 ## Overview
 Code Colab is a powerful, real-time collaborative coding platform designed to streamline team coding efforts, whether you're working on a small project or managing a large-scale development task. With a clean, user-friendly interface, Code Colab provides a seamless experience for developers to write, share, and edit code together in real-time. It’s the perfect tool for coding interviews, pair programming, and collaborative development.
 
+## Snapshots
+![Screenshot (46)](https://github.com/user-attachments/assets/eff45a90-8b6d-4355-95f9-ba714536a081)
+
+![Screenshot (48)](https://github.com/user-attachments/assets/386772cb-2a44-487a-a4eb-400fdc1f09a3)
+
+![Screenshot (50)](https://github.com/user-attachments/assets/63a92795-a3e0-4f01-a361-940afb124359)
 
 ## Features
 1. Real-Time Collaboration: Work together with your team in real-time, watching code changes appear instantly across all connected devices.
