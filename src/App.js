@@ -7,10 +7,19 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/:sessionId" element={<Editor />} />
-                </Routes>
+                <header className="app-banner">
+                    <div className="header-content">
+                        <span className="owner-info">ⓒ Chandrashekar Guru</span>
+                        <span className="header-title">Code Colab</span>
+                    </div>
+                </header>
+                <div className='content'>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/:sessionId" element={<Editor />} />
+                    </Routes>
+                </div>
+                
             </div>
         </Router>
     );

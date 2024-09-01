@@ -1,50 +1,54 @@
-/* Editor.css */
+/* Styling for the fixed header at the top */
+/* Header container */
+.app-banner {
+    width: 100%; 
+    background-color: #282c34; 
+    height: 40px; 
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center the title text horizontally */
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Wrapper for header content to handle layout */
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px; /* Optional: Add padding for spacing */
+    box-sizing: border-box;
+}
+
+/* Owner information styling */
+.owner-info {
+    font-size: 10px; /* Smaller font size for owner info */
+    color: #ffffff; /* White color for text */
+    text-align: left; /* Center the title text */
+    flex: 1; /* Push the content to the left */
+}
+
+/* Main title styling */
+.header-title {
+    font-size: 24px; 
+    color: #ffffff; 
+    position: absolute;
+    left: 50%; /* Start at the middle of the header */
+    transform: translateX(-50%); /* Shift the title back to truly center it */
+}
+
+
+/* Container holding both the info panel and the editor */
 .container {
     display: flex;
-    height: 100vh;
-    background-color: #f5f5f5;
+    height: calc(100vh - 40px);  /* Subtract the exact height of the header */
+    background-color: #f5f5f5;  /* Light background color */
+    overflow: hidden; /* Prevent any overflow from adding space at the bottom */
 }
 
-.editor-container {
-    flex: 2;
-    padding: 20px;
-    background-color: #1e1e1e;
-    color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.editor-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.editor-header label {
-    margin-right: 10px;
-    font-size: 16px;
-}
-
-.editor-header select {
-    padding: 5px;
-    background-color: #2e2e2e;
-    color: white;
-    border: none;
-    border-radius: 4px;
-}
-
-.info-panel h2, .info-panel h3 {
-    margin-top: 0;
-    color: #333;
-}
-
-.info-panel p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-}
-
+/* Info panel on the left */
 .info-panel {
     width: 400px; /* Set the width to a fixed value */
     padding: 40px;
@@ -52,8 +56,65 @@
     border-right: 1px solid #ccc;
     overflow-y: auto;
     height: 100%; /* Ensures the panel takes up the full height of its container */
+    box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
 }
 
+/* Editor container on the right */
+.editor-container {
+    flex: 2;  /* Take up twice the space compared to the info panel */
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure the editor takes up the full height of the container */
+    box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
+    overflow-y: auto; /* Allow scrolling inside the editor if needed */
+}
+
+/* Additional styling for the editor header */
+/* Editor header styling */
+.editor-header {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Vertically center the items */
+    margin-bottom: 10px; /* Space below the header */
+    gap: 10px; /* Small gap between the label and the select dropdown */
+}
+
+/* Label styling */
+.editor-header label {
+    font-size: 16px;
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any padding to avoid extra space */
+}
+
+/* Select dropdown styling */
+.editor-header select {
+    padding: 5px;
+    background-color: #2e2e2e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 0; /* Remove any default margins */
+    padding: 5px; /* Padding inside the dropdown */
+}
+
+
+/* Styling for headings in the info panel */
+.info-panel h2, .info-panel h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Paragraph styling in the info panel */
+.info-panel p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Textarea styling */
 textarea {
     width: 100%;
     padding: 10px;
@@ -61,4 +122,6 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 10px;
     resize: vertical; /* Allows vertical resizing of the textarea */
+    box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
+    margin-bottom: 0; /* Ensure no extra margin at the bottom of the textarea */
 }

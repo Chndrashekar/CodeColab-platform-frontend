@@ -106,12 +106,15 @@ const Editor = () => {
                     onChange={handleEditorChange}
                     name="ace-editor"
                     editorProps={{ $blockScrolling: true }}
+                    setOptions={{
+                        showPrintMargin: false,  // Disable the vertical line
+                    }}
                     width="100%"
-                    height="85vh"
+                    height="100vh"
                     fontSize={fontSize}  // Set the font size of the editor
                 />
             </div>
-            
+
         </div>
     );
 };
